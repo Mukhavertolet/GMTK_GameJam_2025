@@ -14,12 +14,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemy
+  - Item
+  - Bullet
+  - HurtBox
   - 
   - 
   - 
