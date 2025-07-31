@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EntityStats : MonoBehaviour
@@ -10,6 +11,9 @@ public class EntityStats : MonoBehaviour
 
     [SerializeField]
     private GameObject shootPos;
+
+    public Room room;
+
 
 
     //PREFABS
@@ -27,7 +31,12 @@ public class EntityStats : MonoBehaviour
     public int damage = 1;
     public float attackSpd = 1f;
 
+    public float bulletSpd = 3f;
+
     public float moveSpd = 5f;
+
+    public float InvisibilityTime = 0.1f;
+    public bool isVulnerable = true;
 
 
 
@@ -48,12 +57,47 @@ public class EntityStats : MonoBehaviour
     {
         Debug.Log($"{entityName} attack!");
 
-        GameObject firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity);
+        Bullet firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity).GetComponent<Bullet>();
+
 
         Vector2 dir = shootPos.transform.position - transform.position;
         float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        firedBulletPattern.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        firedBulletPattern.gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+
+        firedBulletPattern.shooterName = entityName;
+        firedBulletPattern.moveSpd = bulletSpd;
+        firedBulletPattern.damage = damage;
+    }
+
+    public IEnumerator TakeDamage(int dmg)
+    {
+
+        isVulnerable = false;
+        currentHP -= dmg;
+
+        if (currentHP <= 0)
+            StartCoroutine(Die());
+
+        yield return new WaitForSeconds(InvisibilityTime);
+        isVulnerable = true;
+    }
+
+    public IEnumerator Die()
+    {
+        room.RemoveEnemy(this);
+
+        Destroy(gameObject);
+        yield return null;
     }
 
 
+    public void SetStatsDefault(int maxHP_, int currentHP_, int damage_, float attackSpd_, float moveSpd_, float bulletSpd_)
+    {
+        maxHP = maxHP_;
+        currentHP = currentHP_;
+        damage = damage_;
+        attackSpd = attackSpd_;
+        moveSpd = moveSpd_;
+        bulletSpd = bulletSpd_;
+    }
 }

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 4753
+  controlID: 25323
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 4712
+  controlID: 25280
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4648
+  controlID: 25213
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,9 +236,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0619ffff222dffffac41ffffe8f4ffff
+      m_SelectedIDs: 0619ffff
+      m_LastClickedID: -59130
+      m_ExpandedIDs: 6e97feff10e0feff64fdfeff222dffffac41ffffe8f4fffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -355,7 +355,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -381,7 +381,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -699,9 +699,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.1785803, y: -0.7673876, z: 0.058316074}
+    m_Target: {x: 1.1709676, y: 0.10483869, z: 0.04725873}
     speed: 2
-    m_Value: {x: 2.1785803, y: -0.7673876, z: 0.058316074}
+    m_Value: {x: 1.1709676, y: 0.10483869, z: 0.04725873}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -751,9 +751,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.5874467
+    m_Target: 6.3575616
     speed: 2
-    m_Value: 5.5874467
+    m_Value: 6.3575616
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4713
+  controlID: 25281
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1049,9 +1049,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ac41ffff
-    m_LastClickedInstanceID: -48724
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 0619ffff
+    m_LastClickedInstanceID: -59130
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000fa490000646300009e6100005663000042630000086300000c6300000a630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1193,15 +1193,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 59
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 59
   m_LastProjectPath: D:\Github\GMTK_GameJam_2025\GMTK_GameJam_2025\GMTK_GameJam_2025
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 40620000
-    m_LastClickedID: 25152
+    m_SelectedIDs: 78b30000
+    m_LastClickedID: 45944
     m_ExpandedIDs: 000000004062000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1255,8 +1255,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ac41ffff
-    m_LastClickedInstanceID: -48724
+    m_SelectedInstanceIDs: 0619ffff
+    m_LastClickedInstanceID: -59130
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -1352,7 +1352,7 @@ MonoBehaviour:
     m_CachedPref: 293
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -48724
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

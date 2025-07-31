@@ -5,14 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public EntityStats entityStats;
-
-
     public RotationPoint rotationPoint;
 
 
 
     public Camera cam;
     public Vector3 mousePos;
+
+
+
+    private void Awake()
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {

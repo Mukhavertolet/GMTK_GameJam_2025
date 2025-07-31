@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -20,6 +21,10 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         StartCoroutine(timer());
+
+        if (shooterName == "Player")
+            gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+
     }
 
     // Update is called once per frame
@@ -41,6 +46,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Wall>() != null || (collision.GetComponent<HurtBox>() != null && collision.GetComponent<HurtBox>().entityName != shooterName) )
+        {
+            
+            Destroy(gameObject);
+        }
+    }
 
 }
