@@ -10,6 +10,10 @@ public class EntityStats : MonoBehaviour
     //OBJECT REFERENCES
 
     [SerializeField]
+    private GameManager gameManager;
+
+
+    [SerializeField]
     private GameObject shootPos;
 
     public Room room;
@@ -32,6 +36,7 @@ public class EntityStats : MonoBehaviour
     public float attackSpd = 1f;
 
     public float bulletSpd = 3f;
+    public float bulletSize = 1f;
 
     public float moveSpd = 5f;
 
@@ -44,7 +49,9 @@ public class EntityStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -63,6 +70,7 @@ public class EntityStats : MonoBehaviour
         Vector2 dir = shootPos.transform.position - transform.position;
         float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         firedBulletPattern.gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        firedBulletPattern.gameObject.transform.localScale *= bulletSize;
 
         firedBulletPattern.shooterName = entityName;
         firedBulletPattern.moveSpd = bulletSpd;
@@ -84,14 +92,14 @@ public class EntityStats : MonoBehaviour
 
     public IEnumerator Die()
     {
-        room.RemoveEnemy(this);
+        gameManager.RemoveEntity(this);
 
         Destroy(gameObject);
         yield return null;
     }
 
 
-    public void SetStatsDefault(int maxHP_, int currentHP_, int damage_, float attackSpd_, float moveSpd_, float bulletSpd_)
+    public void SetStatsDefault(int maxHP_, int currentHP_, int damage_, float attackSpd_, float moveSpd_, float bulletSpd_, float bulletSize_)
     {
         maxHP = maxHP_;
         currentHP = currentHP_;
@@ -99,5 +107,8 @@ public class EntityStats : MonoBehaviour
         attackSpd = attackSpd_;
         moveSpd = moveSpd_;
         bulletSpd = bulletSpd_;
+        bulletSize = bulletSize_;
+
+        currentHP = maxHP;
     }
 }

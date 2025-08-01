@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(timer());
+        StartCoroutine(Timer());
 
         if (shooterName == "Player")
             gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
 
     }
 
-    private IEnumerator timer()
+    private IEnumerator Timer()
     {
         while (true)
         {

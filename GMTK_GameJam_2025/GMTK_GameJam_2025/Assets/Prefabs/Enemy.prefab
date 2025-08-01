@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6537352896434132114}
-  - component: {fileID: 7052239244114805429}
+  - component: {fileID: 197928767875600728}
   - component: {fileID: 6196352929680930521}
   - component: {fileID: 5549065573179977383}
   m_Layer: 14
@@ -34,8 +34,8 @@ Transform:
   m_Father: {fileID: 2785008707860849379}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &7052239244114805429
-CircleCollider2D:
+--- !u!61 &197928767875600728
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -67,8 +67,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1.1, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!50 &6196352929680930521
 Rigidbody2D:
   serializedVersion: 4
@@ -109,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: 
+  entity: {fileID: 0}
 --- !u!1 &1922336397590274820
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +262,8 @@ GameObject:
   - component: {fileID: 5056282579077673819}
   - component: {fileID: 8730469325825854853}
   - component: {fileID: 7282344876173771536}
-  m_Layer: 10
+  - component: {fileID: 5544164145098044099}
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -274,7 +286,7 @@ Transform:
   - {fileID: 7988015689250284766}
   - {fileID: 6537352896434132114}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5056282579077673819
 BoxCollider2D:
@@ -336,6 +348,11 @@ MonoBehaviour:
   entityStats: {fileID: 7282344876173771536}
   rotationPoint: {fileID: 5629781111830175225}
   target: {fileID: 0}
+  currentLifeTime: 0
+  timeSinceLastMove: 0
+  timeSinceLastAttack: 0
+  isMoving: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &7282344876173771536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,13 +366,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Enemy
-  shootPos: {fileID: 0}
-  bulletPattern: {fileID: 0}
+  gameManager: {fileID: 0}
+  shootPos: {fileID: 6641295814669246259}
+  room: {fileID: 0}
+  bulletPattern: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
   maxHP: 5
   currentHP: 5
   damage: 1
   attackSpd: 1
-  moveSpd: 5
+  bulletSpd: 3
+  moveSpd: 2
+  InvisibilityTime: 0.1
+  isVulnerable: 1
+--- !u!50 &5544164145098044099
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158685837912241640}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &6641295814669246259
 GameObject:
   m_ObjectHideFlags: 0

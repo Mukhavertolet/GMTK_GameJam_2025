@@ -11,12 +11,12 @@ public class HurtBox : MonoBehaviour
     void Start()
     {
         entity = gameObject.GetComponentInParent<EntityStats>();
-        entity.name = entity.entityName;
+        entityName = entity.entityName;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Bullet>() != null && entity.isVulnerable)
+        if (collision.GetComponent<Bullet>() != null && entity.isVulnerable && collision.GetComponent<Bullet>().shooterName != entityName)
         {
             StartCoroutine(entity.TakeDamage((int)collision.GetComponent<Bullet>().damage));
         }

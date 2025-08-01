@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -7,7 +8,7 @@ public class Room : MonoBehaviour
     public int roomNumber = 0;
 
     [SerializeField]
-    private GameObject enemyPrefab;
+    private List<GameObject> enemyPrefab;
 
     public int enemyQuantity = 1;
 
@@ -45,17 +46,9 @@ public class Room : MonoBehaviour
         for (int i = 0; i < enemyQuantity; i++)
         {
             yield return new WaitForSeconds(0.1f);
-            enemies.Add(Instantiate(enemyPrefab, new Vector2(Random.Range(-3f, 3f), Random.Range(-3f, 3f)), Quaternion.identity).GetComponent<EntityStats>());
+            enemies.Add(Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Count)], new Vector2(Random.Range(-3f, 3f), Random.Range(-3f, 3f)), Quaternion.identity).GetComponent<EntityStats>());
             enemies[i].room = this;
         }
     }
 
-    public void RemoveEnemy(EntityStats enemy)
-    {
-        enemies.Remove(enemy);
-        if (enemies.Count <= 0)
-        {
-            StartCoroutine(GameManager.gameManager.StartNewRoom());
-        }
-    }
 }

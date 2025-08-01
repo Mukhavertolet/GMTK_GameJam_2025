@@ -131,7 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNumber: 1
-  enemyPrefab: {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
+  enemyPrefab:
+  - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
+  - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
+  - {fileID: 6158685837912241640, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
   enemyQuantity: 2
   items: []
   enemies: []

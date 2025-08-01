@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //object references
     [SerializeField]
     public static EntityStats playerInstance;
     [SerializeField]
     public static GameManager gameManager;
+
+    public UIManager uiManager;
+
 
     //prefabs
     [SerializeField]
@@ -23,7 +27,6 @@ public class GameManager : MonoBehaviour
     private GameObject roomPrefab;
 
 
-    //object references
 
 
     //gameplay params
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    public int loopNumber = 1;
+    public int cycleCounter = 1;
 
 
     public int enemiesCount = 0;
@@ -45,11 +48,12 @@ public class GameManager : MonoBehaviour
     public int maxHP = 5;
     public int currentHP = 5;
 
-    public int damage = 5;
-    public float attackSpd = 1f;
+    public int damage = 2;
+    public float attackSpd = 2f;
 
     public float moveSpd = 5f;
     public float bulletSpd = 6f;
+    public float bulletSize = 1f;
 
 
     private void Awake()
@@ -75,7 +79,8 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             rooms.Add(Instantiate(roomPrefab).GetComponent<Room>());
-
+            rooms[i].roomNumber = i + 1;
+            rooms[i].enemyQuantity += i + cycleCounter;
         }
         StartCoroutine(StartNewRoom());
 
@@ -101,18 +106,29 @@ public class GameManager : MonoBehaviour
         {
             currentRoom.gameObject.SetActive(false);
             currentRoom = rooms[0];
+            cycleCounter += 1;
         }
         else
             currentRoom = rooms[0];
+
+        uiManager.SetRoomNumberText(currentRoom.roomNumber);
 
         currentRoom.gameObject.SetActive(true);
         currentRoom.StartRoom();
 
 
         playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity).GetComponent<EntityStats>();
-        playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd);
+        playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize);
 
     }
 
 
+    public void RemoveEntity(EntityStats entity)
+    {
+        currentRoom.enemies.Remove(entity);
+        if (currentRoom.enemies.Count <= 0)
+        {
+            StartCoroutine(GameManager.gameManager.StartNewRoom());
+        }
+    }
 }
