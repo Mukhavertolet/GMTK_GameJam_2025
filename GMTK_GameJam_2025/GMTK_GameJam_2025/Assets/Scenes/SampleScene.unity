@@ -439,7 +439,7 @@ MonoBehaviour:
   maxHP: 5
   currentHP: 5
   damage: 2
-  attackSpd: 1
+  attackSpd: 0.5
   moveSpd: 5
   bulletSpd: 6
   bulletSize: 1

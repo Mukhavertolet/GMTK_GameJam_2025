@@ -43,7 +43,6 @@ public class EnemyController : MonoBehaviour
 
         if (timeSinceLastMove > randomMovementTime && !isMoving)
         {
-            Debug.Log(randomMovementTime);
             isMoving = true;
             StartCoroutine(Move());
             movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
@@ -55,7 +54,6 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator Move()
     {
-        Debug.Log("Moving!");
         yield return new WaitForSeconds(Random.Range(0.5f, 0.7f));
         timeSinceLastMove = 0f;
         movement = Vector3.zero;

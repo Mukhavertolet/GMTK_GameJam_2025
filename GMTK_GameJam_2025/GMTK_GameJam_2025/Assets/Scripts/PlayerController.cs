@@ -53,6 +53,12 @@ public class PlayerController : MonoBehaviour
             timeSinceLastAttack = 0f;
         }    
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            EffectManager.effectManager.OnSpace();
+        }
+
+
 
     }
 

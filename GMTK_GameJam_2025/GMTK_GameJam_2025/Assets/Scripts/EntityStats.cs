@@ -62,7 +62,6 @@ public class EntityStats : MonoBehaviour
 
     public void Attack()
     {
-        Debug.Log($"{entityName} attack!");
 
         Bullet firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity).GetComponent<Bullet>();
 
