@@ -32,14 +32,6 @@ public class EffectManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    conditionSPACE();
-        //}
-        //if (Input.GetKeyDown(KeyCode.Z))
-        //{
-        //    conditionZ();
-        //}
 
     }
     public IEffect AddEffect(IEffect effect)

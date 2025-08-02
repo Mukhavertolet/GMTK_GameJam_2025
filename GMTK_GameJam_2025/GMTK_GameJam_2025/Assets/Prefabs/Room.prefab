@@ -135,6 +135,10 @@ MonoBehaviour:
   - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
   - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
   - {fileID: 6158685837912241640, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+  - {fileID: 8367948779040338502, guid: 6a4bb252b64ba6241a0dd9ecbf9b73e7, type: 3}
+  - {fileID: 5390213203671335552, guid: 343edb813503f2a449168531cf23981c, type: 3}
+  - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
+  - {fileID: 6158685837912241640, guid: dfa255dc5ee63574fa7d13bbd8f63c3a, type: 3}
   enemyQuantity: 2
   items: []
   enemies: []

@@ -38,6 +38,8 @@ public class EntityStats : MonoBehaviour
     public float bulletSpd = 3f;
     public float bulletSize = 1f;
 
+    public int pierces = 0;
+
     public float moveSpd = 5f;
 
     public float InvisibilityTime = 0.1f;
@@ -63,17 +65,14 @@ public class EntityStats : MonoBehaviour
     public void Attack()
     {
 
-        Bullet firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity).GetComponent<Bullet>();
+        GameObject firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity);
 
 
         Vector2 dir = shootPos.transform.position - transform.position;
         float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        firedBulletPattern.gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
-        firedBulletPattern.gameObject.transform.localScale *= bulletSize;
+        firedBulletPattern.transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
-        firedBulletPattern.shooterName = entityName;
-        firedBulletPattern.moveSpd = bulletSpd;
-        firedBulletPattern.damage = damage;
+        firedBulletPattern.GetComponent<BulletPattern>().SetBulletParams(bulletSize, damage, bulletSpd, entityName, pierces);
     }
 
     public IEnumerator TakeDamage(int dmg)
@@ -98,7 +97,7 @@ public class EntityStats : MonoBehaviour
     }
 
 
-    public void SetStatsDefault(int maxHP_, int currentHP_, int damage_, float attackSpd_, float moveSpd_, float bulletSpd_, float bulletSize_)
+    public void SetStatsDefault(int maxHP_, int currentHP_, int damage_, float attackSpd_, float moveSpd_, float bulletSpd_, float bulletSize_, int pierces_)
     {
         maxHP = maxHP_;
         currentHP = currentHP_;
@@ -107,6 +106,7 @@ public class EntityStats : MonoBehaviour
         moveSpd = moveSpd_;
         bulletSpd = bulletSpd_;
         bulletSize = bulletSize_;
+        pierces = pierces_;
 
         currentHP = maxHP;
     }

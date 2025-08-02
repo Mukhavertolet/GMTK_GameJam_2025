@@ -441,8 +441,9 @@ MonoBehaviour:
   damage: 2
   attackSpd: 0.5
   moveSpd: 5
-  bulletSpd: 6
+  bulletSpd: 12
   bulletSize: 1
+  pierces: 0
 --- !u!4 &593756690
 Transform:
   m_ObjectHideFlags: 0

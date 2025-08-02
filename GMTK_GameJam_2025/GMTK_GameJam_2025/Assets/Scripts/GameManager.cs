@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
     public float bulletSpd = 6f;
     public float bulletSize = 1f;
 
+    public int pierces;
+
 
     private void Awake()
     {
@@ -118,7 +120,7 @@ public class GameManager : MonoBehaviour
 
 
         playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity).GetComponent<EntityStats>();
-        playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize);
+        playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
 
     }
 

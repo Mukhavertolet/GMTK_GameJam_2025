@@ -313,6 +313,10 @@ MonoBehaviour:
   rotationPoint: {fileID: 9063489075997543167}
   cam: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
+  currentLifeTime: 0
+  timeSinceLastMove: 0
+  timeSinceLastAttack: 0
+  canAttack: 1
 --- !u!114 &8838942124544185900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +333,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   shootPos: {fileID: 5527611692901024833}
   room: {fileID: 0}
-  bulletPattern: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+  bulletPattern: {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
   maxHP: 5
   currentHP: 5
   damage: 5

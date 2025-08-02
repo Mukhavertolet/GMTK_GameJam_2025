@@ -369,12 +369,13 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   shootPos: {fileID: 6641295814669246259}
   room: {fileID: 0}
-  bulletPattern: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+  bulletPattern: {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
   maxHP: 5
   currentHP: 5
   damage: 1
   attackSpd: 1
   bulletSpd: 3
+  bulletSize: 1
   moveSpd: 2
   InvisibilityTime: 0.1
   isVulnerable: 1
