@@ -19,7 +19,7 @@ public class BulletPattern : MonoBehaviour
 
     private void Start()
     {
-        
+        GameManager.gameManager.BulletPatternInstances.Add(this.gameObject);
         bulletPrefab = new List<Bullet>();
         foreach (Transform child in transform)
         {
@@ -45,6 +45,11 @@ public class BulletPattern : MonoBehaviour
 
             yield return new WaitForSeconds(bullet.delay);
         }
+
+        yield return new WaitForSeconds(10f);
+        Destroy(gameObject);
+
+
     }
     public void SetBulletParams(float size, float damage, float speed, string shooter, int pierceAmount)
     {

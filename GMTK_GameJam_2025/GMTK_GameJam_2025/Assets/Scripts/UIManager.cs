@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public EntityStats playerInstance;
+
     public GameObject roomNumberText;
-
-
+    public TMP_Text playerHPText;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(playerInstance != null)
+            playerHPText.text = playerInstance.currentHP.ToString();
     }
 
     public void SetRoomNumberText(int roomNumber)

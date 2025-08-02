@@ -52,8 +52,6 @@ public class EntityStats : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-
-        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -108,6 +106,5 @@ public class EntityStats : MonoBehaviour
         bulletSize = bulletSize_;
         pierces = pierces_;
 
-        currentHP = maxHP;
     }
 }

@@ -48,6 +48,7 @@ public class Room : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             enemies.Add(Instantiate(enemyPrefab[Random.Range(0, enemyPrefab.Count)], new Vector2(Random.Range(-3f, 3f), Random.Range(-3f, 3f)), Quaternion.identity).GetComponent<EntityStats>());
             enemies[i].room = this;
+            enemies[i].currentHP = enemies[i].maxHP;
         }
     }
 

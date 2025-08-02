@@ -43,8 +43,23 @@ public class GameManager : MonoBehaviour
     public int enemiesCount = 0;
 
 
+    public List<GameObject> BulletPatternInstances;
+
+
 
     //default player stats
+
+    private int DEFAULTmaxHP = 5;
+    private int DEFAULTcurrentHP = 5;
+    private int DEFAULTdamage = 2;
+    private float DEFAULTattackSpd = 0.5f;
+    private float DEFAULTmoveSpd = 4f;
+    private float DEFAULTbulletSpd = 12f;
+    private float DEFAULTbulletSize = 1f;
+    private int DEFAULTpierces = 0;
+
+
+
     public int maxHP = 5;
     public int currentHP = 5;
 
@@ -55,7 +70,7 @@ public class GameManager : MonoBehaviour
     public float bulletSpd = 6f;
     public float bulletSize = 1f;
 
-    public int pierces;
+    public int pierces = 0;
 
 
     private void Awake()
@@ -72,6 +87,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    private void RefreshEffects()
+    {
+        maxHP = DEFAULTmaxHP;
+        currentHP = DEFAULTcurrentHP;
+
+        damage = DEFAULTdamage;
+        attackSpd = DEFAULTattackSpd;
+
+        moveSpd = DEFAULTmoveSpd;
+        bulletSpd = DEFAULTbulletSpd;
+        bulletSize = DEFAULTbulletSize;
+
+        pierces = DEFAULTpierces;
+
+
+
 
     }
 
@@ -93,10 +127,23 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator StartNewRoom()
     {
+        foreach (GameObject bulletPattern in BulletPatternInstances)
+        {
+            Destroy(bulletPattern);
+        }
+
         yield return new WaitForSeconds(2);
 
+        Debug.Log(currentHP, playerInstance);
+
         if (playerInstance != null)
+        {
+            DEFAULTcurrentHP = playerInstance.currentHP;
+
             Destroy(playerInstance.gameObject);
+        }
+
+
 
         if (currentRoom != null && rooms.IndexOf(currentRoom) < 3)
         {
@@ -118,9 +165,16 @@ public class GameManager : MonoBehaviour
         currentRoom.gameObject.SetActive(true);
         currentRoom.StartRoom();
 
+        Debug.Log(currentHP, playerInstance);
+
+        RefreshEffects();
+
+        Debug.Log(currentHP, playerInstance);
 
         playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity).GetComponent<EntityStats>();
         playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
+
+        uiManager.playerInstance = playerInstance;
 
     }
 
