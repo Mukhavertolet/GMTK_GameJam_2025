@@ -380,6 +380,7 @@ MonoBehaviour:
   moveSpd: 2
   InvisibilityTime: 0.1
   isVulnerable: 1
+  pointCost: 4
 --- !u!50 &5544164145098044099
 Rigidbody2D:
   serializedVersion: 4

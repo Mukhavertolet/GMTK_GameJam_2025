@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
     public int cycleCounter = 1;
 
+    public int cumulativePointRemaining = 0;
+
 
     public int enemiesCount = 0;
 
@@ -133,7 +135,7 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2);
-        
+
         //Debug.Log(currentHP, playerInstance);
 
         if (playerInstance != null)
@@ -163,6 +165,13 @@ public class GameManager : MonoBehaviour
         uiManager.SetRoomNumberText(currentRoom.roomNumber);
 
         currentRoom.gameObject.SetActive(true);
+
+        currentRoom.enemyPointsMax = (int)(rooms.IndexOf(currentRoom) * 1.5f + cycleCounter * 3 + 10);
+        if (currentRoom.roomNumber == 3)
+        {
+            currentRoom.enemyPointsMax += cumulativePointRemaining;
+            cumulativePointRemaining = 0;
+        }
         currentRoom.StartRoom();
 
         //Debug.Log(currentHP, playerInstance);
@@ -175,12 +184,12 @@ public class GameManager : MonoBehaviour
         //playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
         playerInstance.currentHP = currentHP;
 
-        foreach(IEffect effect in EffectManager.effectManager.effects)
+        foreach (IEffect effect in EffectManager.effectManager.effects)
         {
             if (effect.GetCondition() == "")
                 effect.ApplyEffect();
         }
-        
+
 
 
         uiManager.playerInstance = playerInstance;

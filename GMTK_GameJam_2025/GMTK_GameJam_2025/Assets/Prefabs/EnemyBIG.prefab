@@ -371,14 +371,16 @@ MonoBehaviour:
   room: {fileID: 0}
   bulletPattern: {fileID: 8651423801682747489, guid: 6edd7e1ee96c55142884d140d0e9a3cf, type: 3}
   maxHP: 10
-  currentHP: 5
-  damage: 1
+  currentHP: 10
+  damage: 2
   attackSpd: 4
   bulletSpd: 5
   bulletSize: 2
+  pierces: 0
   moveSpd: 1
   InvisibilityTime: 0.1
   isVulnerable: 1
+  pointCost: 7
 --- !u!50 &5544164145098044099
 Rigidbody2D:
   serializedVersion: 4

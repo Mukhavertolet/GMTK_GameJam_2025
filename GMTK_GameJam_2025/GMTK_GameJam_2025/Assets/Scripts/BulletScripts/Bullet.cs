@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject target;
+
     public GameObject trianglePointer;
 
     public bool isActivated = false;
@@ -22,6 +25,9 @@ public class Bullet : MonoBehaviour
 
 
     public float delay = 0f;
+
+    public float followSpeed = 0;
+    public bool followTarget = false;
 
 
     public Vector2 direction = Vector2.right;
@@ -52,6 +58,9 @@ public class Bullet : MonoBehaviour
 
         if (currentLifeTime >= maxLifetime)
             Destroy(gameObject);
+
+        if (followTarget)
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, followSpeed * Time.deltaTime);
     }
 
     private IEnumerator Timer()

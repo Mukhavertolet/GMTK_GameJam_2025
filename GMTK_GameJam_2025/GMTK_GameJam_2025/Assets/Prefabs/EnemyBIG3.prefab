@@ -69,8 +69,12 @@ PrefabInstance:
       value: EnemyBIG3
       objectReference: {fileID: 0}
     - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
       propertyPath: damage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
       propertyPath: bulletSpd

@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BulletPattern : MonoBehaviour
 {
+    private GameObject target;
+
+
     public string shooterName;
 
     public float bulletSize;
@@ -14,11 +19,17 @@ public class BulletPattern : MonoBehaviour
 
     public List<Bullet> bulletPrefab;
 
+    public float rotationAmount = 0;
 
+    public bool followTarget = false;
+    public float followSpeed = 1f;
 
+    
 
     private void Start()
     {
+        target = GameManager.playerInstance.gameObject;
+
         GameManager.gameManager.BulletPatternInstances.Add(this.gameObject);
         bulletPrefab = new List<Bullet>();
         foreach (Transform child in transform)
@@ -28,6 +39,21 @@ public class BulletPattern : MonoBehaviour
 
             StartCoroutine(LaunchBullets());
     }
+
+    private void Update()
+    {
+        if (rotationAmount != 0)
+        {
+            transform.Rotate(0, 0, 6f * rotationAmount * Time.deltaTime);
+        }
+
+        if (followTarget)
+        {
+            //transform.position += Vector3.Lerp(transform.position, GameManager.playerInstance.transform.position, 10);
+        }
+
+    }
+
 
     public IEnumerator LaunchBullets()
     {
@@ -41,6 +67,7 @@ public class BulletPattern : MonoBehaviour
             bullet.gameObject.transform.localScale *= bulletSize;
             bullet.shooterName = shooterName;
             bullet.pierces = pierces;
+            bullet.target = target;
 
             bullet.ActivateBullet();
 

@@ -45,7 +45,7 @@ public class EntityStats : MonoBehaviour
     public float InvisibilityTime = 0.1f;
     public bool isVulnerable = true;
 
-
+    public int pointCost = 5;
 
 
     // Start is called before the first frame update
@@ -72,6 +72,19 @@ public class EntityStats : MonoBehaviour
 
         firedBulletPattern.GetComponent<BulletPattern>().SetBulletParams(bulletSize, damage, bulletSpd, entityName, pierces);
     }
+
+    public void SpecialAttack()
+    {
+        GameObject firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity);
+
+
+        Vector2 dir = shootPos.transform.position - transform.position;
+        float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        firedBulletPattern.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+
+        firedBulletPattern.GetComponent<BulletPattern>().SetBulletParams(bulletSize, damage, bulletSpd, entityName, pierces);
+    }
+
 
     public IEnumerator TakeDamage(int dmg)
     {

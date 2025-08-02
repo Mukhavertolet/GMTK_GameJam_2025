@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: delay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
       value: Bullet (1)
@@ -145,6 +149,10 @@ PrefabInstance:
     - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: delay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
@@ -228,6 +236,10 @@ PrefabInstance:
       propertyPath: delay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
       value: Bullet (3)
@@ -309,6 +321,10 @@ PrefabInstance:
     - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: delay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
@@ -392,6 +408,10 @@ PrefabInstance:
       propertyPath: delay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
       value: Bullet (2)
@@ -474,6 +494,10 @@ PrefabInstance:
       propertyPath: delay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
       value: Bullet (4)
@@ -500,6 +524,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8305206693934191224, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
+      propertyPath: rotationAmount
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 545401826249145167, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -551,6 +579,10 @@ PrefabInstance:
     - target: {fileID: 3396389287667368479, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972378593134505892, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -646,6 +678,10 @@ PrefabInstance:
     - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: delay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869310100903701646, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
+      propertyPath: moveSpd
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5220461044941766965, guid: f0f9493ff9a29fb479c810707521353c, type: 3}
       propertyPath: m_Name
