@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
 {
     public GameObject trianglePointer;
 
+    public bool isActivated = false;
+
 
     public string shooterName;
 
@@ -29,6 +31,12 @@ public class Bullet : MonoBehaviour
     {
         trianglePointer.SetActive(false);
 
+
+    }
+
+    public void ActivateBullet()
+    {
+        isActivated = true;
         StartCoroutine(Timer());
 
         if (shooterName == "Player")
@@ -39,8 +47,8 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        transform.Translate(direction * moveSpd * Time.deltaTime, Space.Self);
+        if (isActivated)
+            transform.Translate(direction * moveSpd * Time.deltaTime, Space.Self);
 
         if (currentLifeTime >= maxLifetime)
             Destroy(gameObject);

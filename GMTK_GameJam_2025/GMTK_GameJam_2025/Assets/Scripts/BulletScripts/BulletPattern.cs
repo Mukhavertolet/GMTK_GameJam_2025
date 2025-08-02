@@ -42,6 +42,8 @@ public class BulletPattern : MonoBehaviour
             bullet.shooterName = shooterName;
             bullet.pierces = pierces;
 
+            bullet.ActivateBullet();
+
 
             yield return new WaitForSeconds(bullet.delay);
         }

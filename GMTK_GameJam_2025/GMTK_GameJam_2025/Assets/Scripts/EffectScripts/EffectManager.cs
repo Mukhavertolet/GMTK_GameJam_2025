@@ -57,7 +57,11 @@ public class EffectManager : MonoBehaviour
             case "OnShoot":
                 conditionShoot += effect.ApplyEffect;
                 break;
+            default:
+                effect.ApplyEffect();
+                break;
         }
+
     }
 
 }

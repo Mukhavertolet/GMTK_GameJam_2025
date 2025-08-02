@@ -23,7 +23,7 @@ public class EntityStats : MonoBehaviour
     //PREFABS
 
     [SerializeField]
-    private GameObject bulletPattern;
+    public GameObject bulletPattern;
 
 
 

@@ -175,6 +175,14 @@ public class GameManager : MonoBehaviour
         //playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
         playerInstance.currentHP = currentHP;
 
+        foreach(IEffect effect in EffectManager.effectManager.effects)
+        {
+            if (effect.GetCondition() == "")
+                effect.ApplyEffect();
+        }
+        
+
+
         uiManager.playerInstance = playerInstance;
 
     }
