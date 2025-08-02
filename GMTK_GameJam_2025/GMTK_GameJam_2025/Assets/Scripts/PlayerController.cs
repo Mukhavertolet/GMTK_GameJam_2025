@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            EffectManager.effectManager.OnSpace();
+            //EffectManager.effectManager.OnSpace();
         }
 
 

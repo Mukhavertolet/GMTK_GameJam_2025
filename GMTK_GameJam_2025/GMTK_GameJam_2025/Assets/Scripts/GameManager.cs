@@ -133,8 +133,8 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2);
-
-        Debug.Log(currentHP, playerInstance);
+        
+        //Debug.Log(currentHP, playerInstance);
 
         if (playerInstance != null)
         {
@@ -165,14 +165,15 @@ public class GameManager : MonoBehaviour
         currentRoom.gameObject.SetActive(true);
         currentRoom.StartRoom();
 
-        Debug.Log(currentHP, playerInstance);
+        //Debug.Log(currentHP, playerInstance);
 
         RefreshEffects();
 
-        Debug.Log(currentHP, playerInstance);
+        //Debug.Log(currentHP, playerInstance);
 
         playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity).GetComponent<EntityStats>();
-        playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
+        //playerInstance.SetStatsDefault(maxHP, currentHP, damage, attackSpd, moveSpd, bulletSpd, bulletSize, pierces);
+        playerInstance.currentHP = currentHP;
 
         uiManager.playerInstance = playerInstance;
 

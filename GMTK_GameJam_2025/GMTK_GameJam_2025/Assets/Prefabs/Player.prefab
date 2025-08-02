@@ -336,12 +336,12 @@ MonoBehaviour:
   bulletPattern: {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
   maxHP: 5
   currentHP: 5
-  damage: 5
-  attackSpd: 1
-  bulletSpd: 3
+  damage: 2
+  attackSpd: 0.5
+  bulletSpd: 12
   bulletSize: 1
   pierces: 0
-  moveSpd: 5
+  moveSpd: 4
   InvisibilityTime: 0.25
   isVulnerable: 1
 --- !u!50 &8326141715454297101

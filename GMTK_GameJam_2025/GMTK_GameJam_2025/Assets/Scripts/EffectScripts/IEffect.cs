@@ -12,4 +12,7 @@ public interface IEffect
     {
 
     }
+
+    public string[] GetNameAndDesc();
+
 }

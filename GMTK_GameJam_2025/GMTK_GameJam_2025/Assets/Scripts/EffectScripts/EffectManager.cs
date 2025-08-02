@@ -22,17 +22,17 @@ public class EffectManager : MonoBehaviour
 
     private void Start()
     {
-        conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
-        conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
+    //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
+    //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
 
 
-        conditionSPACE += AddEffect(new IncreaseBulletSizeEffect()).ApplyEffect;
+    //    conditionSPACE += AddEffect(new IncreaseBulletSizeEffect()).ApplyEffect;
 
     }
 
     private void Update()
     {
-
+        Debug.Log(effects.Count);
     }
     public IEffect AddEffect(IEffect effect)
     {
