@@ -18,6 +18,8 @@ public class Item : MonoBehaviour
 
     public List<string[]> effectNames = new List<string[]>();
 
+    public List<string> conditions = new List<string>();
+
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class Item : MonoBehaviour
         {
             effects.Add(effect);
             effectNames.Add(effect.GetNameAndDesc());
+            conditions.Add(effect.GetCondition());
         }
 
         effectCounter = effects.Count;

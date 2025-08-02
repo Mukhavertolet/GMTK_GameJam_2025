@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ public class InventoryManager : MonoBehaviour
             items.Add(selectedItem.GetComponent<Item>());
             AddItemEffects(selectedItem.GetComponent<Item>());
 
-            Destroy(selectedItem);
+            selectedItem.SetActive(false);
             selectedItem = null;
         }
     }
@@ -33,8 +34,7 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (var effect in item.effects)
         {
-            EffectManager.effectManager.AddEffect(effect);
-
+            EffectManager.effectManager.AddEffect(effect, effect.GetCondition());
         }
     }
 

@@ -167,11 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2010dde3167de764d889c8255382f088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trianglePointer: {fileID: 7063684216982655513}
   shooterName: 
   damage: 1
   moveSpd: 2
   maxLifetime: 5
   currentLifeTime: 0
+  pierces: 0
   delay: 0
   direction: {x: 1, y: 0}
 --- !u!212 &2257305980149339361
@@ -242,7 +244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4714589852468364129
 Transform:
   m_ObjectHideFlags: 0

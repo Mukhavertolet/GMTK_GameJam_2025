@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EffectManager : MonoBehaviour
@@ -8,7 +10,7 @@ public class EffectManager : MonoBehaviour
 
 
     public delegate void Condition();
-    public event Condition conditionSPACE;
+    public event Condition conditionShoot;
     public event Condition conditionZ;
 
 
@@ -22,11 +24,11 @@ public class EffectManager : MonoBehaviour
 
     private void Start()
     {
-    //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
-    //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
+        //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
+        //    conditionSPACE += AddEffect(new FlatDamageAddEffect()).ApplyEffect;
 
 
-    //    conditionSPACE += AddEffect(new IncreaseBulletSizeEffect()).ApplyEffect;
+        //    conditionSPACE += AddEffect(new IncreaseBulletSizeEffect()).ApplyEffect;
 
     }
 
@@ -34,15 +36,30 @@ public class EffectManager : MonoBehaviour
     {
         Debug.Log(effects.Count);
     }
-    public IEffect AddEffect(IEffect effect)
+    public IEffect AddEffect(IEffect effect, string condition)
     {
+        SubscribeTo(condition, effect);
+
         effects.Add(effect);
         return effect;
     }
 
-    public void OnSpace()
+    public void OnShoot()
     {
-        conditionSPACE();
+        if (conditionShoot != null)
+            conditionShoot();
+    }
+
+    public void SubscribeTo(string condition, IEffect effect)
+    {
+        switch (condition)
+        {
+            case "OnShoot":
+                conditionShoot += effect.ApplyEffect;
+                break;
+        }
     }
 
 }
+
+

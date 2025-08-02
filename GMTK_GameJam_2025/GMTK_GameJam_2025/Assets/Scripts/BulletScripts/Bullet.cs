@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject trianglePointer;
+
+
     public string shooterName;
 
     public float damage = 1f;
@@ -24,6 +27,8 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trianglePointer.SetActive(false);
+
         StartCoroutine(Timer());
 
         if (shooterName == "Player")

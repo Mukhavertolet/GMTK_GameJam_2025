@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
             entityStats.Attack();
             canAttack = false;
             timeSinceLastAttack = 0f;
+
+            EffectManager.effectManager.OnShoot();
+
         }    
 
         if(Input.GetKeyDown(KeyCode.Space))
