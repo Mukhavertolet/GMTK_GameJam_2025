@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
 
     public UIManager uiManager;
+    public AudioManager audioManager;
 
 
     //prefabs
@@ -91,6 +92,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         if (SceneManager.GetActiveScene().name != "SampleScene")
             StartCoroutine(Tutorial());
         else

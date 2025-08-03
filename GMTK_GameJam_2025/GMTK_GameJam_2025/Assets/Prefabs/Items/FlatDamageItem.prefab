@@ -844,7 +844,7 @@ MonoBehaviour:
   effectName: damage flat
   effectDesc: Add damage
   condition: 
-  value: 0
+  value: 1
   loop: 0
 --- !u!114 &4955912381174437957
 MonoBehaviour:
@@ -859,9 +859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: bullet size
-  effectDesc: Bigger bullets
+  effectDesc: Bigger bullets (Stackable)
   condition: 
-  value: 0
+  value: 0.2
   loop: 0
 --- !u!4 &8682333331852609300 stripped
 Transform:

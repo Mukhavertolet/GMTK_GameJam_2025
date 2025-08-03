@@ -20,7 +20,7 @@ public class IncreaseBulletSizeEffect : MonoBehaviour, IEffect
 
     public void ApplyEffect()
     {
-        GameManager.playerInstance.bulletSize += value * loop;
+        GameManager.playerInstance.bulletSize += value * (int)(loop * 1.5);
         Debug.Log("BULLET SIZE INCREASED");
     }
 

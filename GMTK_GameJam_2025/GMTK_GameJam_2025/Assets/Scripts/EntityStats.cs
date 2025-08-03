@@ -11,6 +11,8 @@ public class EntityStats : MonoBehaviour
 
     [SerializeField]
     private GameManager gameManager;
+    [SerializeField]
+    private AudioManager audioManager;
 
 
     [SerializeField]
@@ -50,10 +52,18 @@ public class EntityStats : MonoBehaviour
     public int pointCost = 5;
 
 
+    public string[] idleSound;
+    public string[] shootSound;
+    public string[] deathSound;
+    public string[] hitSound;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        audioManager = gameManager.audioManager;
     }
 
     // Update is called once per frame
@@ -65,7 +75,7 @@ public class EntityStats : MonoBehaviour
 
     public void Attack()
     {
-
+        audioManager.Play(shootSound[Random.Range(0, shootSound.Length)]);
 
         GameObject firedBulletPattern = Instantiate(bulletPattern[Random.Range(0, bulletPattern.Count)], shootPos.transform.position, Quaternion.identity);
 
