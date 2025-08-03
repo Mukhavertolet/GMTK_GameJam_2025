@@ -24,7 +24,7 @@ public class BulletPattern : MonoBehaviour
     public bool followTarget = false;
     public float followSpeed = 1f;
 
-    
+
 
     private void Start()
     {
@@ -37,7 +37,7 @@ public class BulletPattern : MonoBehaviour
             bulletPrefab.Add(child.GetComponent<Bullet>());
         }
 
-            StartCoroutine(LaunchBullets());
+        StartCoroutine(LaunchBullets());
     }
 
     private void Update()
@@ -71,8 +71,9 @@ public class BulletPattern : MonoBehaviour
 
             bullet.ActivateBullet();
 
+            if (bullet.delay > 0)
+                yield return new WaitForSeconds(bullet.delay);
 
-            yield return new WaitForSeconds(bullet.delay);
         }
 
         yield return new WaitForSeconds(10f);

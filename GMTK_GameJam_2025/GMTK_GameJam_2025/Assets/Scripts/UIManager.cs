@@ -11,6 +11,13 @@ public class UIManager : MonoBehaviour
     public GameObject roomNumberText;
     public TMP_Text playerHPText;
 
+
+    public GameObject gameUI;
+
+    public GameObject deathText;
+    public GameObject restartText;
+
+
     // Start is called before the first frame update
     void Start()
     {

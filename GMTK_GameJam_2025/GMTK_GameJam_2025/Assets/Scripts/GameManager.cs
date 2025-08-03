@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //object references
@@ -94,7 +94,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+            Restart();
     }
 
     private void RefreshEffects()
@@ -222,10 +226,37 @@ public class GameManager : MonoBehaviour
 
     public void RemoveEntity(EntityStats entity)
     {
-        currentRoom.enemies.Remove(entity);
-        if (currentRoom.enemies.Count <= 0)
+        if (entity != playerInstance)
         {
-            StartCoroutine(GameManager.gameManager.StartNewRoom());
+            currentRoom.enemies.Remove(entity);
+            if (currentRoom.enemies.Count <= 0)
+            {
+                StartCoroutine(GameManager.gameManager.StartNewRoom());
+            }
+        }
+        else
+        {
+            StartCoroutine(StopGame());
         }
     }
+
+    private IEnumerator StopGame()
+    {
+        yield return new WaitForSeconds(2f);
+
+        uiManager.deathText.SetActive(true);
+        uiManager.gameUI.SetActive(false);
+
+        yield return new WaitForSeconds(3f);
+        uiManager.restartText.SetActive(true);
+
+
+        yield return null;
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
 }
