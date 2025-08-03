@@ -121,6 +121,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
+      propertyPath: shootSound.Array.data[0]
+      value: BossAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
       propertyPath: bulletPattern.Array.data[1]
       value: 
       objectReference: {fileID: 3779325843744177459, guid: 60a51acb38082c14d98a4189b19906d5, type: 3}

@@ -451,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Enemy
   gameManager: {fileID: 0}
+  audioManager: {fileID: 0}
   shootPos: {fileID: 6641295814669246259}
   room: {fileID: 0}
   bulletPattern:
@@ -468,6 +469,11 @@ MonoBehaviour:
   InvisibilityTime: 0.1
   isVulnerable: 1
   pointCost: 4
+  idleSound: []
+  shootSound:
+  - SkeletonAttack
+  deathSound: []
+  hitSound: []
 --- !u!50 &5544164145098044099
 Rigidbody2D:
   serializedVersion: 4

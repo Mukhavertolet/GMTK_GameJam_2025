@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
+            s.source.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
             s.source.loop = s.loop;
         }
     }
@@ -26,10 +26,21 @@ public class AudioManager : MonoBehaviour
         Play("Theme");
     }
 
+    public void Play(string name, float pitch)
+    {
+        Sound s = Array.Find(sounds, Sound => Sound.sname == name);
+        if (s != null)
+        {
+            s.pitch = pitch;
+            s.source.Play();
+        }
+    }
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, Sound => Sound.name == name);
+        Sound s = Array.Find(sounds, Sound => Sound.sname == name);
         if (s != null)
+        {
             s.source.Play();
+        }
     }
 }

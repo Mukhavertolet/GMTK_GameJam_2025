@@ -405,7 +405,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 0}
+  - sname: Theme
+    clip: {fileID: 8300000, guid: 4ae87b238fb5c1441b618cc52de3b7d2, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - sname: PlayerAttack
+    clip: {fileID: 8300000, guid: 62da5c98dae9f984a87edb54f68ce80d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - sname: PlayerAttack2
+    clip: {fileID: 8300000, guid: d11898fa19d97744295d24fda93025f9, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - sname: MageAttack
+    clip: {fileID: 8300000, guid: d11898fa19d97744295d24fda93025f9, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - sname: GoblinAttack
+    clip: {fileID: 8300000, guid: 279d851d083065e45b5d427b1eac6ccc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - sname: SkeletonAttack
+    clip: {fileID: 8300000, guid: 62da5c98dae9f984a87edb54f68ce80d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - sname: BossAttack
+    clip: {fileID: 8300000, guid: f8882ba07bba676498b9b3186b49bb1c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!82 &397304063
 AudioSource:
   m_ObjectHideFlags: 0

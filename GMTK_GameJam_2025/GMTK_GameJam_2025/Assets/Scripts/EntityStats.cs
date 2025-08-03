@@ -75,7 +75,7 @@ public class EntityStats : MonoBehaviour
 
     public void Attack()
     {
-        audioManager.Play(shootSound[Random.Range(0, shootSound.Length)]);
+        audioManager.Play(shootSound[Random.Range(0, shootSound.Length)], Random.Range(0.9f, 1.1f));
 
         GameObject firedBulletPattern = Instantiate(bulletPattern[Random.Range(0, bulletPattern.Count)], shootPos.transform.position, Quaternion.identity);
 
