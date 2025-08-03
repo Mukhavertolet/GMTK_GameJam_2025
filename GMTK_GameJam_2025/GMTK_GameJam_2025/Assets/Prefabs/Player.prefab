@@ -333,7 +333,10 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   shootPos: {fileID: 5527611692901024833}
   room: {fileID: 0}
-  bulletPattern: {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
+  bulletPattern:
+  - {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
+  bulletPatternSpecial: {fileID: 0}
+  bulletPatternUltimate: {fileID: 0}
   maxHP: 5
   currentHP: 5
   damage: 2
@@ -344,6 +347,7 @@ MonoBehaviour:
   moveSpd: 4
   InvisibilityTime: 0.25
   isVulnerable: 1
+  pointCost: 5
 --- !u!50 &8326141715454297101
 Rigidbody2D:
   serializedVersion: 4

@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public Room currentRoom;
 
+    public bool boss = false;
 
 
     public int cycleCounter = 1;
@@ -46,6 +47,10 @@ public class GameManager : MonoBehaviour
 
 
     public List<GameObject> BulletPatternInstances;
+
+
+    public List<GameObject> itemDrops;
+
 
 
 
@@ -126,20 +131,32 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+    
+
+    
 
     public IEnumerator StartNewRoom()
     {
+
+
         foreach (GameObject bulletPattern in BulletPatternInstances)
         {
             Destroy(bulletPattern);
         }
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
 
         //Debug.Log(currentHP, playerInstance);
 
         if (playerInstance != null)
         {
+            currentRoom.DropItems();
+            InventoryManager.inventory.choice = true;
+
+            yield return new WaitUntil(() => !InventoryManager.inventory.choice);
+
+            yield return new WaitForSeconds(3);
+
             DEFAULTcurrentHP = playerInstance.currentHP;
 
             Destroy(playerInstance.gameObject);
@@ -172,7 +189,13 @@ public class GameManager : MonoBehaviour
             currentRoom.enemyPointsMax += cumulativePointRemaining;
             cumulativePointRemaining = 0;
         }
-        currentRoom.StartRoom();
+
+        if (currentRoom.roomNumber == 4)
+            boss = true;
+        else
+            boss = false;
+
+        currentRoom.StartRoom(boss);
 
         //Debug.Log(currentHP, playerInstance);
 

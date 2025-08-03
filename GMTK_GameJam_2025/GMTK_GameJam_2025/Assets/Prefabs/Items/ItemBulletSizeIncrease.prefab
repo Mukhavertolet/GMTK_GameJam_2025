@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 5732580225456866490}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &3921490333069466279
 CircleCollider2D:
@@ -69,7 +69,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.4
+  m_Radius: 1.1
 --- !u!114 &5108193543180828302
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,7 +23,9 @@ public class EntityStats : MonoBehaviour
     //PREFABS
 
     [SerializeField]
-    public GameObject bulletPattern;
+    public List<GameObject> bulletPattern = new List<GameObject>();
+    public GameObject bulletPatternSpecial;
+    public GameObject bulletPatternUltimate;
 
 
 
@@ -63,7 +65,8 @@ public class EntityStats : MonoBehaviour
     public void Attack()
     {
 
-        GameObject firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity);
+
+        GameObject firedBulletPattern = Instantiate(bulletPattern[Random.Range(0, bulletPattern.Count)], shootPos.transform.position, Quaternion.identity);
 
 
         Vector2 dir = shootPos.transform.position - transform.position;
@@ -75,7 +78,7 @@ public class EntityStats : MonoBehaviour
 
     public void SpecialAttack()
     {
-        GameObject firedBulletPattern = Instantiate(bulletPattern, shootPos.transform.position, Quaternion.identity);
+        GameObject firedBulletPattern = Instantiate(bulletPatternSpecial, shootPos.transform.position, Quaternion.identity);
 
 
         Vector2 dir = shootPos.transform.position - transform.position;

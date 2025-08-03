@@ -12,6 +12,9 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject selectedItem;
 
+    public GameObject chosenItem;
+    public bool choice;
+
     private void Start()
     {
         inventory = GetComponent<InventoryManager>();
@@ -19,8 +22,18 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && selectedItem != null)
         {
+            if (chosenItem == null && choice)
+            {
+                chosenItem = selectedItem;
+                GameManager.gameManager.currentRoom.RemoveDroppedItemsExcept(chosenItem);
+                choice = false;
+                return;
+            }
+
+
+
             items.Add(selectedItem.GetComponent<Item>());
             AddItemEffects(selectedItem.GetComponent<Item>());
 

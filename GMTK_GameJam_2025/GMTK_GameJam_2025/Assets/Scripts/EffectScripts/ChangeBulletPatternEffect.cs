@@ -18,7 +18,7 @@ public class ChangeBulletPatternEffect : MonoBehaviour, IEffect
 
     public void ApplyEffect()
     {
-        GameManager.playerInstance.bulletPattern = BulletPattern;
+        GameManager.playerInstance.bulletPattern[0] = BulletPattern;
         Debug.Log($"bullet pattern changed to {BulletPattern}");
     }
 

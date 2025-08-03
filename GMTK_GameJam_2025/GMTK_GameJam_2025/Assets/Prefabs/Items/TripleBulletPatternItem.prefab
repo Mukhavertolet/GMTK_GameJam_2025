@@ -97,4 +97,4 @@ MonoBehaviour:
   effectName: Triple bullet
   effectDesc: Shoot 3 big bullets with big damage
   condition: 
-  BulletPattern: {fileID: 1056863145038879519, guid: 156ffd5daa6bce14882b47fe02adf7c2, type: 3}
+  BulletPattern: {fileID: 2498689760484638961, guid: 4928ef0f38b031a4dbc349ab37656bf6, type: 3}

@@ -10,6 +10,8 @@ public class Room : MonoBehaviour
     [SerializeField]
     private List<GameObject> enemyPrefab;
 
+    [SerializeField]
+    private List<GameObject> bossPrefab;
 
 
     public int enemyQuantity = 1;
@@ -26,6 +28,16 @@ public class Room : MonoBehaviour
     //enemies alive in the room
     public List<EntityStats> enemies = new List<EntityStats>();
 
+    public List<GameObject> itemDrops;
+    public List<GameObject> droppedItems;
+
+    public GameObject leftItem;
+
+
+
+
+
+    public GameObject leftItemParticleSystem;
 
 
 
@@ -33,7 +45,7 @@ public class Room : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        itemDrops = GameManager.gameManager.itemDrops;
 
     }
 
@@ -43,22 +55,78 @@ public class Room : MonoBehaviour
 
     }
 
-    public void StartRoom()
+    public void StartRoom(bool boss)
     {
-        enemyPointsCurrent = enemyPointsMax;
+        if (leftItem != null)
+            leftItem.SetActive(false);
 
-        foreach(GameObject enemy in enemyPrefab)
+        if (!boss)
         {
-            EntityStats e = enemy.GetComponent<EntityStats>();
-            if(e.pointCost < lowestEnemyCost) lowestEnemyCost = e.pointCost;
+            enemyPointsCurrent = enemyPointsMax;
+
+            foreach (GameObject enemy in enemyPrefab)
+            {
+                EntityStats e = enemy.GetComponent<EntityStats>();
+                if (e.pointCost < lowestEnemyCost) lowestEnemyCost = e.pointCost;
+            }
+
+            StartCoroutine(SpawnEnemies());
+        }
+        else
+        {
+            StartCoroutine(SpawnBoss());
+        }
+    }
+    public void DropItems()
+    {
+        if (leftItem != null)
+        {
+            droppedItems.Add(leftItem);
+            leftItem.SetActive(true);
+            leftItem.transform.position = new Vector3(-3, 0, 0);
+            Instantiate(leftItemParticleSystem, leftItem.transform);
         }
 
-        StartCoroutine(SpawnEnemies());
+        for (int i = -1; i <= 1; i++)
+        {
+            if (leftItem != null && i == -1)
+                continue;
+
+            droppedItems.Add(Instantiate(GameManager.gameManager.itemDrops[Random.Range(0, itemDrops.Count)], transform.position + new Vector3(i * 3, 0, 0), Quaternion.identity, transform));
+
+
+        }
+    }
+    public void RemoveDroppedItemsExcept(GameObject chosenItem)
+    {
+        foreach (GameObject item in droppedItems)
+        {
+            if (item != chosenItem)
+            {
+                Destroy(item);
+            }
+        }
+        droppedItems.Clear();
+        InventoryManager.inventory.chosenItem = null;
+        leftItem = chosenItem;
+
+    }
+
+    private IEnumerator SpawnBoss()
+    {
+        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(0.1f);
+        EntityStats bossEnemy = Instantiate(bossPrefab[Random.Range(0, bossPrefab.Count)], Vector2.zero, Quaternion.identity).GetComponent<EntityStats>();
+        enemies.Add(bossEnemy);
+        bossEnemy.room = this;
+        bossEnemy.currentHP = bossEnemy.maxHP;
+
     }
 
     private IEnumerator SpawnEnemies()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         foreach (GameObject enemyToSpawn in SelectEnemies())
         {
             yield return new WaitForSeconds(0.1f);
