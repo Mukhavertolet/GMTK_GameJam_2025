@@ -135,6 +135,10 @@ public class Room : MonoBehaviour
         EntityStats bossEnemy = Instantiate(bossPrefab[Random.Range(0, bossPrefab.Count)], Vector2.zero, Quaternion.identity).GetComponent<EntityStats>();
         enemies.Add(bossEnemy);
         bossEnemy.room = this;
+
+        bossEnemy.moveSpd += 0.1f * GameManager.gameManager.cycleCounter;
+        bossEnemy.damage += GameManager.gameManager.cycleCounter;
+        bossEnemy.maxHP *= GameManager.gameManager.cycleCounter / 2;
         bossEnemy.currentHP = bossEnemy.maxHP;
 
         bossEnemy.attackSpd -= 0.1f * GameManager.gameManager.cycleCounter - 1;

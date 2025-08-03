@@ -640,9 +640,9 @@ MonoBehaviour:
   bulletPatternSpecial: {fileID: 8651423801682747489, guid: 6edd7e1ee96c55142884d140d0e9a3cf, type: 3}
   bulletPatternUltimate: {fileID: 0}
   maxHP: 7
-  currentHP: 5
+  currentHP: 7
   damage: 3
-  attackSpd: 69
+  attackSpd: 15
   bulletSpd: 0.3
   bulletSize: 5
   pierces: 0

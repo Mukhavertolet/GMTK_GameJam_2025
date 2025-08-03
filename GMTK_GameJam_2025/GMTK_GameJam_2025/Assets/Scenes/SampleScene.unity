@@ -409,7 +409,7 @@ MonoBehaviour:
   sounds:
   - sname: Theme
     clip: {fileID: 8300000, guid: 4ae87b238fb5c1441b618cc52de3b7d2, type: 3}
-    volume: 0.5
+    volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -426,7 +426,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - sname: MageAttack
-    clip: {fileID: 8300000, guid: d11898fa19d97744295d24fda93025f9, type: 3}
+    clip: {fileID: 8300000, guid: 2978ca02cd203c148b9b8232e69d692f, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -890,6 +890,8 @@ MonoBehaviour:
   - {fileID: 5956268936755158538, guid: 03c5c876d193abe498e6a6460560653d, type: 3}
   - {fileID: 5956268936755158538, guid: 9060fa3d8ccc66448bbb38e76909c124, type: 3}
   - {fileID: 5956268936755158538, guid: 84bf4dcc308c97840882309017c2bc8b, type: 3}
+  - {fileID: 5956268936755158538, guid: 020089fb01d27024ea5ba93f3cc6fe0e, type: 3}
+  - {fileID: 5956268936755158538, guid: 4de3aa6bec36d984b839b3d276b99a30, type: 3}
   maxHP: 5
   currentHP: 5
   damage: 2
