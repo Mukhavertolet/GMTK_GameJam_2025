@@ -11,7 +11,7 @@ public class EffectManager : MonoBehaviour
 
     public delegate void Condition();
     public event Condition conditionShoot;
-    public event Condition conditionZ;
+    public event Condition conditionRoomClear;
 
 
     public List<IEffect> effects = new List<IEffect>();
@@ -49,13 +49,20 @@ public class EffectManager : MonoBehaviour
         if (conditionShoot != null)
             conditionShoot();
     }
-
+    public void OnRoomClear()
+    {
+        if (conditionRoomClear != null)
+            conditionRoomClear();
+    }
     public void SubscribeTo(string condition, IEffect effect)
     {
         switch (condition)
         {
             case "OnShoot":
                 conditionShoot += effect.ApplyEffect;
+                break;
+            case "OnRoomClear":
+                conditionRoomClear += effect.ApplyEffect;
                 break;
             default:
                 effect.ApplyEffect();

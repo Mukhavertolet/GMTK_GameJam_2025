@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
 
-
+            GameManager.gameManager.currentRoom.leftItem = null;
 
             items.Add(selectedItem.GetComponent<Item>());
             AddItemEffects(selectedItem.GetComponent<Item>());

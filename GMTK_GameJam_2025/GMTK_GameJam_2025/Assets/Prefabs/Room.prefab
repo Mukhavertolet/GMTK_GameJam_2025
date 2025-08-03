@@ -147,7 +147,11 @@ MonoBehaviour:
   itemDrops: []
   droppedItems: []
   leftItem: {fileID: 0}
-  leftItemParticleSystem: {fileID: 5182180841956622202, guid: 51e708a90b1f3334d916e8fbba37dbf7, type: 3}
+  leftItemParticleSystem:
+  - {fileID: 5182180841956622202, guid: dc30272158e0472409e6265506f0ca49, type: 3}
+  - {fileID: 5182180841956622202, guid: 51e708a90b1f3334d916e8fbba37dbf7, type: 3}
+  - {fileID: 5182180841956622202, guid: 93056636bf7d49248bde7ef284681c21, type: 3}
+  - {fileID: 5182180841956622202, guid: 9c7a3226c1abdf14f997266523f05fde, type: 3}
 --- !u!1 &5916862366860398268
 GameObject:
   m_ObjectHideFlags: 0

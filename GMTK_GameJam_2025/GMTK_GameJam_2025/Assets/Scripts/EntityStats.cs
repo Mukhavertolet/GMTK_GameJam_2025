@@ -59,7 +59,8 @@ public class EntityStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (currentHP > maxHP)
+            currentHP = maxHP;
     }
 
     public void Attack()

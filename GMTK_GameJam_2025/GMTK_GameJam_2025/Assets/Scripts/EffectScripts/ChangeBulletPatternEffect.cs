@@ -9,7 +9,11 @@ public class ChangeBulletPatternEffect : MonoBehaviour, IEffect
 
     public string condition;
 
-    public GameObject BulletPattern;
+    public List<GameObject> BulletPattern;
+
+    public int stack;
+    public int loop;
+
 
     public string[] GetNameAndDesc()
     {
@@ -18,12 +22,19 @@ public class ChangeBulletPatternEffect : MonoBehaviour, IEffect
 
     public void ApplyEffect()
     {
-        GameManager.playerInstance.bulletPattern[0] = BulletPattern;
+        if(loop > BulletPattern.Count)
+            loop = BulletPattern.Count;
+
+        GameManager.playerInstance.bulletPattern[0] = BulletPattern[loop-1];
         Debug.Log($"bullet pattern changed to {BulletPattern}");
     }
 
     public string GetCondition()
     {
         return condition;
+    }
+    public void SetItemLevel(int level)
+    {
+        loop = level;
     }
 }

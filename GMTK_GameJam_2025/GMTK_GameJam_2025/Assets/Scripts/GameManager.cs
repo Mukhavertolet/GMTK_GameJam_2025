@@ -183,7 +183,7 @@ public class GameManager : MonoBehaviour
 
         currentRoom.gameObject.SetActive(true);
 
-        currentRoom.enemyPointsMax = (int)(rooms.IndexOf(currentRoom) * 1.5f + cycleCounter * 3 + 10);
+        currentRoom.enemyPointsMax = (int)(rooms.IndexOf(currentRoom) * 1.5f + cycleCounter * 8 + 10);
         if (currentRoom.roomNumber == 3)
         {
             currentRoom.enemyPointsMax += cumulativePointRemaining;

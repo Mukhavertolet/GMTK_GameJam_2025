@@ -37,7 +37,7 @@ public class Room : MonoBehaviour
 
 
 
-    public GameObject leftItemParticleSystem;
+    public List<GameObject> leftItemParticleSystem;
 
 
 
@@ -79,12 +79,21 @@ public class Room : MonoBehaviour
     }
     public void DropItems()
     {
+        EffectManager.effectManager.OnRoomClear();
+
         if (leftItem != null)
         {
             droppedItems.Add(leftItem);
             leftItem.SetActive(true);
             leftItem.transform.position = new Vector3(-3, 0, 0);
-            Instantiate(leftItemParticleSystem, leftItem.transform);
+            leftItem.GetComponent<Item>().itemLevel += 1;
+
+            int particle = leftItem.GetComponent<Item>().itemLevel - 2;
+
+            if (particle > leftItemParticleSystem.Count)
+                particle = leftItemParticleSystem.Count;
+
+            Instantiate(leftItemParticleSystem[particle], leftItem.transform);
         }
 
         for (int i = -1; i <= 1; i++)

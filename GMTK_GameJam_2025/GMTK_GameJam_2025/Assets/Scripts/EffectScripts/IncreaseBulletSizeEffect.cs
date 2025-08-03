@@ -10,6 +10,9 @@ public class IncreaseBulletSizeEffect : MonoBehaviour, IEffect
 
     public string condition;
 
+    public float value;
+    public int loop;
+
     public string[] GetNameAndDesc()
     {
         return new string[] { effectName, effectDesc };
@@ -17,7 +20,7 @@ public class IncreaseBulletSizeEffect : MonoBehaviour, IEffect
 
     public void ApplyEffect()
     {
-        GameManager.playerInstance.bulletSize += 0.5f;
+        GameManager.playerInstance.bulletSize += value * loop;
         Debug.Log("BULLET SIZE INCREASED");
     }
 
@@ -25,5 +28,8 @@ public class IncreaseBulletSizeEffect : MonoBehaviour, IEffect
     {
         return condition;
     }
-
+    public void SetItemLevel(int level)
+    {
+        loop = level;
+    }
 }

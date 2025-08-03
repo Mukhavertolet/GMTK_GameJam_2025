@@ -9,6 +9,7 @@ public class FlatHealthAddEffect : MonoBehaviour, IEffect
     public string effectDesc;
 
     public string condition;
+    public int loop;
     public string[] GetNameAndDesc()
     {
         return new string[] { effectName, effectDesc };
@@ -20,5 +21,9 @@ public class FlatHealthAddEffect : MonoBehaviour, IEffect
     public string GetCondition()
     {
         return condition;
+    }
+    public void SetItemLevel(int level)
+    {
+        loop = level;
     }
 }

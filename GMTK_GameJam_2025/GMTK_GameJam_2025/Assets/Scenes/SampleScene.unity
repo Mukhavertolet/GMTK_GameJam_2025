@@ -404,8 +404,9 @@ MonoBehaviour:
   enemiesCount: 0
   BulletPatternInstances: []
   itemDrops:
-  - {fileID: 2725641037605002135, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
-  - {fileID: 4755431621350861148, guid: c876e4db7665cd2449333205136cdaef, type: 3}
+  - {fileID: 5956268936755158538, guid: 03c5c876d193abe498e6a6460560653d, type: 3}
+  - {fileID: 5956268936755158538, guid: 9060fa3d8ccc66448bbb38e76909c124, type: 3}
+  - {fileID: 5956268936755158538, guid: 84bf4dcc308c97840882309017c2bc8b, type: 3}
   maxHP: 5
   currentHP: 5
   damage: 2
