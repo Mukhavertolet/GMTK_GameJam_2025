@@ -15,6 +15,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject chosenItem;
     public bool choice;
 
+    public string chooseSound;
+    public string pickSound;
+
+
     private void Start()
     {
         inventory = GetComponent<InventoryManager>();
@@ -28,6 +32,12 @@ public class InventoryManager : MonoBehaviour
             {
                 chosenItem = selectedItem;
                 GameManager.gameManager.currentRoom.RemoveDroppedItemsExcept(chosenItem);
+
+
+                GameManager.gameManager.audioManager.Play(chooseSound, UnityEngine.Random.Range(0.9f, 1.1f));
+
+                //chosenItem.GetComponent<Item>().outline.Color = Color.green;
+
                 choice = false;
                 return;
             }
@@ -36,6 +46,8 @@ public class InventoryManager : MonoBehaviour
 
             items.Add(selectedItem.GetComponent<Item>());
             AddItemEffects(selectedItem.GetComponent<Item>());
+
+            GameManager.gameManager.audioManager.Play(pickSound, UnityEngine.Random.Range(0.9f, 1.1f));
 
             selectedItem.SetActive(false);
             selectedItem = null;

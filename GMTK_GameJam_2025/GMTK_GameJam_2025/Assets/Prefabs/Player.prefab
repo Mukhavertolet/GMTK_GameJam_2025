@@ -451,8 +451,11 @@ MonoBehaviour:
   idleSound: []
   shootSound:
   - PlayerAttack
-  deathSound: []
-  hitSound: []
+  - PlayerAttack2
+  deathSound:
+  - PD
+  hitSound:
+  - pdmg
 --- !u!50 &8326141715454297101
 Rigidbody2D:
   serializedVersion: 4

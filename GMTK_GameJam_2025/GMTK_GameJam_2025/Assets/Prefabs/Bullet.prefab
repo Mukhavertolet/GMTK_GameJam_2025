@@ -180,6 +180,8 @@ MonoBehaviour:
   followSpeed: 0
   followTarget: 0
   direction: {x: 1, y: 0}
+  hitSound: bullethit
+  particles: {fileID: 8007229486124846244, guid: 07111143969ffbd47b2eb9119392d072, type: 3}
 --- !u!212 &2257305980149339361
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -106,6 +106,8 @@ public class EntityStats : MonoBehaviour
         isVulnerable = false;
         currentHP -= dmg;
 
+        audioManager.Play(hitSound[Random.Range(0, hitSound.Length)], Random.Range(0.9f, 1.1f));
+
         if (currentHP <= 0)
             StartCoroutine(Die());
 
@@ -116,6 +118,8 @@ public class EntityStats : MonoBehaviour
     public IEnumerator Die()
     {
         gameManager.RemoveEntity(this);
+
+        audioManager.Play(deathSound[Random.Range(0, deathSound.Length)], Random.Range(0.9f, 1.1f));
 
         Destroy(gameObject);
         yield return null;

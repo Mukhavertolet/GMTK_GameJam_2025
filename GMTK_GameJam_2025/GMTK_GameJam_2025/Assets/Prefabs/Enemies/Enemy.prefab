@@ -472,8 +472,11 @@ MonoBehaviour:
   idleSound: []
   shootSound:
   - SkeletonAttack
-  deathSound: []
-  hitSound: []
+  deathSound:
+  - SKD
+  hitSound:
+  - skdmg1
+  - skdmg2
 --- !u!50 &5544164145098044099
 Rigidbody2D:
   serializedVersion: 4

@@ -24,10 +24,11 @@ public class BulletPattern : MonoBehaviour
     public bool followTarget = false;
     public float followSpeed = 1f;
 
-
+    public GameObject fireParticles;
 
     private void Start()
     {
+
         target = GameManager.playerInstance.gameObject;
 
         GameManager.gameManager.BulletPatternInstances.Add(this.gameObject);
@@ -76,6 +77,7 @@ public class BulletPattern : MonoBehaviour
 
         }
 
+        Instantiate(fireParticles, transform.position, transform.rotation * fireParticles.transform.rotation, transform);
         yield return new WaitForSeconds(10f);
         Destroy(gameObject);
 

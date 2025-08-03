@@ -525,6 +525,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8305206693934191224, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
+      propertyPath: fireParticles
+      value: 
+      objectReference: {fileID: 8007229486124846244, guid: 07111143969ffbd47b2eb9119392d072, type: 3}
+    - target: {fileID: -8305206693934191224, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
       propertyPath: rotationAmount
       value: 7.5
       objectReference: {fileID: 0}

@@ -113,6 +113,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1056863145038879519, guid: 240b0e0803ad0b349a50b56c1ab2466d, type: 3}
     - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: hitSound.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: shootSound.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: hitSound.Array.data[0]
+      value: gpdmg1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: hitSound.Array.data[1]
+      value: gpdmg2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
+      propertyPath: deathSound.Array.data[0]
+      value: GPD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282344876173771536, guid: 5bda234bd139e4c41a8d460e81108ee9, type: 3}
       propertyPath: shootSound.Array.data[0]
       value: MageAttack
       objectReference: {fileID: 0}

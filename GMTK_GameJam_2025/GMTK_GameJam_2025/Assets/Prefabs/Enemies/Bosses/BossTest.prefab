@@ -117,12 +117,28 @@ PrefabInstance:
       value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
+      propertyPath: hitSound.Array.data[0]
+      value: bossdmg
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
       propertyPath: bulletPattern.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
+      propertyPath: deathSound.Array.data[0]
+      value: BOSSD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
       propertyPath: shootSound.Array.data[0]
       value: BossAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
+      propertyPath: shootSound.Array.data[1]
+      value: BossAttack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
+      propertyPath: shootSound.Array.data[2]
+      value: BossAttack3
       objectReference: {fileID: 0}
     - target: {fileID: 8837742998398104696, guid: 343edb813503f2a449168531cf23981c, type: 3}
       propertyPath: bulletPattern.Array.data[1]

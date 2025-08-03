@@ -32,6 +32,11 @@ public class Bullet : MonoBehaviour
 
     public Vector2 direction = Vector2.right;
 
+    public string hitSound;
+
+    public GameObject particles;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +83,9 @@ public class Bullet : MonoBehaviour
         {
             if (pierces <= 0)
                 Destroy(gameObject);
+
+            GameManager.gameManager.audioManager.Play(hitSound, Random.Range(0.9f, 1.1f));
+            Instantiate(particles, transform.position, Quaternion.identity);
 
             pierces -= 1;
 

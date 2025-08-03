@@ -56,6 +56,7 @@ MonoBehaviour:
   rotationAmount: 0
   followTarget: 0
   followSpeed: 1
+  fireParticles: {fileID: 7285849899670037299, guid: 198633c1e648d9841ab633016b2617fe, type: 3}
 --- !u!1001 &2200277756782966935
 PrefabInstance:
   m_ObjectHideFlags: 0

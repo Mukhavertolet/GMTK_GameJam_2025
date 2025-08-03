@@ -389,8 +389,12 @@ MonoBehaviour:
   idleSound: []
   shootSound:
   - GoblinAttack
-  deathSound: []
-  hitSound: []
+  - GA2
+  - GA3
+  deathSound:
+  - GOBD
+  hitSound:
+  - gobdmg
 --- !u!50 &5544164145098044099
 Rigidbody2D:
   serializedVersion: 4
