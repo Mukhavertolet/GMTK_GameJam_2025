@@ -629,7 +629,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 915506223
+  m_SortingLayerID: 2097082777
   m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &5988109360285822085
@@ -680,6 +680,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e19595bea89c9641bc1a8421e862c35, type: 3}
     - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
       propertyPath: m_Color.b
       value: 0.2980392
@@ -764,6 +768,18 @@ PrefabInstance:
       propertyPath: itemLevelText
       value: 
       objectReference: {fileID: 1302128692914460921}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1973344597619957147, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
     m_RemovedGameObjects: []

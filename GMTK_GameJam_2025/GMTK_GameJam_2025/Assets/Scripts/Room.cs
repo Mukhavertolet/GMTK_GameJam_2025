@@ -131,6 +131,8 @@ public class Room : MonoBehaviour
         bossEnemy.room = this;
         bossEnemy.currentHP = bossEnemy.maxHP;
 
+        bossEnemy.attackSpd -= 0.1f * GameManager.gameManager.cycleCounter - 1;
+
     }
 
     private IEnumerator SpawnEnemies()

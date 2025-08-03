@@ -629,7 +629,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 915506223
+  m_SortingLayerID: 2097082777
   m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &5988109360285822085
@@ -681,12 +681,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1750967742, guid: 062c13950068e144c82270ad8afe9630, type: 3}
+    - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
       propertyPath: m_Color.b
-      value: 0.94045913
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
       propertyPath: m_Color.g
-      value: 0.2980392
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 764835005286332323, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
       propertyPath: m_Color.r
@@ -760,6 +764,30 @@ PrefabInstance:
       propertyPath: itemLevelText
       value: 
       objectReference: {fileID: 2133995416567496499}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732580225456866490, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1973344597619957147, guid: aac2c8624bd8a604c9948304cd3ce0f8, type: 3}
     m_RemovedGameObjects: []

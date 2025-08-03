@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1292490917
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 852ebaf267bfaab48a083c610803b915, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
   m_FlipX: 0
   m_FlipY: 0
@@ -167,7 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2010dde3167de764d889c8255382f088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   trianglePointer: {fileID: 7063684216982655513}
+  isActivated: 0
   shooterName: 
   damage: 1
   moveSpd: 2
@@ -175,6 +177,8 @@ MonoBehaviour:
   currentLifeTime: 0
   pierces: 0
   delay: 0
+  followSpeed: 0
+  followTarget: 0
   direction: {x: 1, y: 0}
 --- !u!212 &2257305980149339361
 SpriteRenderer:
@@ -217,7 +221,7 @@ SpriteRenderer:
   m_SortingLayerID: 1292490917
   m_SortingLayer: 3
   m_SortingOrder: 3
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 852ebaf267bfaab48a083c610803b915, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0

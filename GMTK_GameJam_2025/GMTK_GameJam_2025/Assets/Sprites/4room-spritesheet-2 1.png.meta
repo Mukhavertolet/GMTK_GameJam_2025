@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 062c13950068e144c82270ad8afe9630
+guid: 12f412e49ef97a6498493e0b9999572d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,10 +110,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4room-spritesheet-2_0
+      name: 4room-spritesheet-2 1_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 30
         y: 96
         width: 9
         height: 31
@@ -124,17 +124,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105cc2eac9d91884aa06568b942bf0d7
-      internalID: -1750967742
+      spriteID: 73c3617717fc8c745a69b07c6740febb
+      internalID: 2048552861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_1
+      name: 4room-spritesheet-2 1_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 55
         y: 96
         width: 21
         height: 23
@@ -145,17 +145,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4faccee967313f4e92790871c2a5c0c
-      internalID: -634677561
+      spriteID: d0e7a93e17eeb7547ba434ca17755846
+      internalID: 405117042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_2
+      name: 4room-spritesheet-2 1_2
       rect:
         serializedVersion: 2
-        x: 73
+        x: 91
         y: 99
         width: 15
         height: 27
@@ -166,17 +166,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1734fb4821656664fa2b72e69f77869d
-      internalID: -384004059
+      spriteID: 3a7638598e6e2fb4a9f058dca8cfbc7b
+      internalID: -2083430097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_3
+      name: 4room-spritesheet-2 1_3
       rect:
         serializedVersion: 2
-        x: 106
+        x: 124
         y: 64
         width: 12
         height: 58
@@ -187,17 +187,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed5ae203b423f304bb89bc0398ca8a09
-      internalID: 1210338787
+      spriteID: abe984e5844b82342bec8975f81f5cfc
+      internalID: 1940487631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_4
+      name: 4room-spritesheet-2 1_4
       rect:
         serializedVersion: 2
-        x: 7
+        x: 25
         y: 64
         width: 15
         height: 15
@@ -208,17 +208,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62e57167225c5b749831555d565ff230
-      internalID: -1732389580
+      spriteID: e08b24f83b1f79b4eac560df60e7b1eb
+      internalID: -1780453083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_5
+      name: 4room-spritesheet-2 1_5
       rect:
         serializedVersion: 2
-        x: 38
+        x: 56
         y: 67
         width: 18
         height: 22
@@ -229,17 +229,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3b28a22a2fff034cb831ec57a500fd0
-      internalID: -1557917822
+      spriteID: 4681e32eebbfabb44982cb8afa04ae82
+      internalID: 1033276945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_6
+      name: 4room-spritesheet-2 1_6
       rect:
         serializedVersion: 2
-        x: 72
+        x: 90
         y: 64
         width: 22
         height: 29
@@ -250,18 +250,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace85503bc6b9fa4aa8775c239591b12
-      internalID: -510520512
+      spriteID: 223eefcbc98717a43aaf02542615dd5a
+      internalID: 295061259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_7
+      name: 4room-spritesheet-2 1_7
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
+        x: 4
+        y: 4
         width: 35
         height: 47
       alignment: 0
@@ -271,17 +271,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2058b43ba311d464ea722c2b116353a5
-      internalID: -73252697
+      spriteID: 75faaff56efb1504286183f944c3be16
+      internalID: -523361941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_8
+      name: 4room-spritesheet-2 1_8
       rect:
         serializedVersion: 2
-        x: 33
+        x: 51
         y: 0
         width: 31
         height: 62
@@ -292,17 +292,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e084928573857840aa6408767b0f84e
-      internalID: -1280875954
+      spriteID: e6c308211698bfd4d803dda03c4f4ff4
+      internalID: -1863639795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_9
+      name: 4room-spritesheet-2 1_9
       rect:
         serializedVersion: 2
-        x: 71
+        x: 89
         y: 32
         width: 22
         height: 29
@@ -313,17 +313,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fde4aec07b711e64ea794791a14e43e4
-      internalID: -174116760
+      spriteID: 777be18060c2a9c40aca26d7fde36cd2
+      internalID: 1210373162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_10
+      name: 4room-spritesheet-2 1_10
       rect:
         serializedVersion: 2
-        x: 104
+        x: 122
         y: 0
         width: 15
         height: 58
@@ -334,17 +334,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca463fa06be27a8418f3904a8d2a1504
-      internalID: 1064298111
+      spriteID: 4c74630cc4eec68468c0d2a0120c48d9
+      internalID: -1590365849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4room-spritesheet-2_11
+      name: 4room-spritesheet-2 1_11
       rect:
         serializedVersion: 2
-        x: 66
+        x: 84
         y: 3
         width: 28
         height: 26
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eb5e345b1acc014883a6b113de230bf
-      internalID: 186330805
+      spriteID: 9796d3d9ad0051341a2ab2ed9b9f4917
+      internalID: 779371667
       vertices: []
       indices: 
       edges: []
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      4room-spritesheet-2_0: -1750967742
-      4room-spritesheet-2_1: -634677561
-      4room-spritesheet-2_10: 1064298111
-      4room-spritesheet-2_11: 186330805
-      4room-spritesheet-2_2: -384004059
-      4room-spritesheet-2_3: 1210338787
-      4room-spritesheet-2_4: -1732389580
-      4room-spritesheet-2_5: -1557917822
-      4room-spritesheet-2_6: -510520512
-      4room-spritesheet-2_7: -73252697
-      4room-spritesheet-2_8: -1280875954
-      4room-spritesheet-2_9: -174116760
+      4room-spritesheet-2 1_0: 2048552861
+      4room-spritesheet-2 1_1: 405117042
+      4room-spritesheet-2 1_10: -1590365849
+      4room-spritesheet-2 1_11: 779371667
+      4room-spritesheet-2 1_2: -2083430097
+      4room-spritesheet-2 1_3: 1940487631
+      4room-spritesheet-2 1_4: -1780453083
+      4room-spritesheet-2 1_5: 1033276945
+      4room-spritesheet-2 1_6: 295061259
+      4room-spritesheet-2 1_7: -523361941
+      4room-spritesheet-2 1_8: -1863639795
+      4room-spritesheet-2 1_9: 1210373162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
