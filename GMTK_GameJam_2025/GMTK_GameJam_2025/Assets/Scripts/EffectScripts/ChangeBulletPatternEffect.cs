@@ -37,4 +37,8 @@ public class ChangeBulletPatternEffect : MonoBehaviour, IEffect
     {
         loop = level;
     }
+    public int GetItemLevel()
+    {
+        return loop;
+    }
 }

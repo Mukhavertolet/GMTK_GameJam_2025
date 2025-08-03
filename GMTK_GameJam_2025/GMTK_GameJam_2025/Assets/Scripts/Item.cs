@@ -48,16 +48,6 @@ public class Item : MonoBehaviour
         canvas.SetActive(false);
 
 
-        foreach (var effect in GetComponents<IEffect>())
-        {
-            effect.SetItemLevel(itemLevel);
-            effects.Add(effect);
-            effectNames.Add(effect.GetNameAndDesc());
-            conditions.Add(effect.GetCondition());
-        }
-
-        effectCounter = effects.Count;
-
     }
 
 
@@ -71,6 +61,17 @@ public class Item : MonoBehaviour
             outline.enabled = true;
             canvas.SetActive(true);
             itemLevelText.text = "Level: " + itemLevel.ToString();
+
+            effects.Clear();
+            foreach (var effect in GetComponents<IEffect>())
+            {
+                effect.SetItemLevel(itemLevel);
+                effects.Add(effect);
+                effectNames.Add(effect.GetNameAndDesc());
+                conditions.Add(effect.GetCondition());
+            }
+
+            effectCounter = effects.Count;
         }
     }
 

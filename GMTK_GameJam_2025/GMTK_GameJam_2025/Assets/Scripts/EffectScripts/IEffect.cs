@@ -18,5 +18,6 @@ public interface IEffect
     public string GetCondition();
 
     public void SetItemLevel(int level);
+    public int GetItemLevel();
 
 }

@@ -32,4 +32,8 @@ public class HealEffect : MonoBehaviour, IEffect
     {
         loop = level;
     }
+    public int GetItemLevel()
+    {
+        return loop;
+    }
 }

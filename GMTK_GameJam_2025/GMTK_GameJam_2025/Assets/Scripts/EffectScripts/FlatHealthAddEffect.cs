@@ -26,4 +26,8 @@ public class FlatHealthAddEffect : MonoBehaviour, IEffect
     {
         loop = level;
     }
+    public int GetItemLevel()
+    {
+        return loop;
+    }
 }

@@ -41,6 +41,16 @@ public class EffectManager : MonoBehaviour
         SubscribeTo(condition, effect);
 
         effects.Add(effect);
+
+
+        effects.Sort(delegate (IEffect e1, IEffect e2) 
+        {
+            if(e1 == null || e2 == null) return 0;
+
+            else return e1.GetItemLevel().CompareTo(e2.GetItemLevel());
+
+        });
+
         return effect;
     }
 

@@ -32,4 +32,8 @@ public class IncreaseBulletSizeEffect : MonoBehaviour, IEffect
     {
         loop = level;
     }
+    public int GetItemLevel()
+    {
+        return loop;
+    }
 }
