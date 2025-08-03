@@ -55,6 +55,12 @@ public class Room : MonoBehaviour
 
     }
 
+    public void StartRoomTutorial()
+    {
+
+        StartCoroutine(SpawnEnemiesTutorial());
+    }
+
     public void StartRoom(bool boss)
     {
         if (leftItem != null)
@@ -146,7 +152,15 @@ public class Room : MonoBehaviour
             enemyToSpawn.GetComponent<EntityStats>().currentHP = enemyToSpawn.GetComponent<EntityStats>().maxHP;
         }
     }
+    private IEnumerator SpawnEnemiesTutorial()
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject enemyToSpawn = enemyPrefab[0];
+        enemies.Add(Instantiate(enemyToSpawn, new Vector2(0, 2f), Quaternion.identity).GetComponent<EntityStats>());
+        enemyToSpawn.GetComponent<EntityStats>().room = this;
+        enemyToSpawn.GetComponent<EntityStats>().currentHP = enemyToSpawn.GetComponent<EntityStats>().maxHP;
 
+    }
     private List<GameObject> SelectEnemies()
     {
         List<GameObject> enemiesSelected = new List<GameObject>();

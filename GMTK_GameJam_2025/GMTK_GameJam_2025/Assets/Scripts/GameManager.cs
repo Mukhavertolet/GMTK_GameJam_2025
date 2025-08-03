@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject roomPrefab;
 
-
+    public GameObject tutRoom;
+    public bool tut;
 
 
     //gameplay params
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
     public List<Room> rooms;
 
     public Room currentRoom;
+
+    private IEnumerator startRoomCor;
 
     public bool boss = false;
 
@@ -88,7 +91,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartGame());
+        if (SceneManager.GetActiveScene().name != "SampleScene")
+            StartCoroutine(Tutorial());
+        else
+            StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
@@ -120,6 +126,30 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private IEnumerator Tutorial()
+    {
+        tut = true;
+        GameObject room = Instantiate(tutRoom);
+
+        playerInstance = Instantiate(playerPrefab, playerSpawnPoint.position, Quaternion.identity).GetComponent<EntityStats>();
+        playerInstance.currentHP = currentHP;
+
+
+
+
+        uiManager.playerInstance = playerInstance;
+
+        yield return new WaitForSeconds(3f);
+
+        room.SetActive(true);
+        room.GetComponent<Room>().StartRoomTutorial();
+
+        currentRoom = room.GetComponent<Room>();
+
+
+        yield return null;
+    }
+
 
     private IEnumerator StartGame()
     {
@@ -135,13 +165,16 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
-    
 
-    
+
+
 
     public IEnumerator StartNewRoom()
     {
-
+        if (tut)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
 
         foreach (GameObject bulletPattern in BulletPatternInstances)
         {
@@ -231,7 +264,12 @@ public class GameManager : MonoBehaviour
             currentRoom.enemies.Remove(entity);
             if (currentRoom.enemies.Count <= 0)
             {
-                StartCoroutine(GameManager.gameManager.StartNewRoom());
+                if (tut)
+                {
+                    Destroy(currentRoom.gameObject);
+                    currentRoom = null;
+                }
+                StartCoroutine(startRoomCor = GameManager.gameManager.StartNewRoom());
             }
         }
         else
